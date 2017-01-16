@@ -13,5 +13,10 @@
   ],
   "homepage": "https://github.com/91bananas/has-deps",
   "author": "David Cushman",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "colors": "^1.1.2",
+    "semver": "^5.3.0",
+    "underscore": "^1.8.3"
+  }
 }
