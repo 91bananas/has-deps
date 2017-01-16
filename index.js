@@ -5,9 +5,10 @@ var semver = require('semver'),
 module.exports = function (grunt) {
     return function () {
         var fs = require('fs'),
-            path = require('path'),
-            dependencies = _.extend({}, require('../package.json').dependencies, require('../package.json').devDependencies);
+            path = require('path');
+            console.log(path);
 
+            dependencies = _.extend({}, require('../package.json').dependencies, require('../package.json').devDependencies);
         function getDirectories(srcpath) {
             return fs.readdirSync(srcpath).filter(function(file) {
                 return fs.statSync(path.join(srcpath, file)).isDirectory();
