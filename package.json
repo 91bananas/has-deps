@@ -1,27 +1,27 @@
 {
-    "name": "has-deps",
-    "version": "0.0.6",
-    "description": "A simple utility to check if your installed dependencies are up to date with what is listed in your package.json'",
-    "main": "index.js",
-    "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1"
-    },
-    "keywords": [
-        "npm",
-        "dependencies",
-        "packages"
-    ],
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/91bananas/has-deps.git"
-    },
-    "bugs": "https://github.com/91bananas/has-deps/issues",
-    "homepage": "https://github.com/91bananas/has-deps",
-    "author": "David Cushman",
-    "license": "MIT",
-    "dependencies": {
-        "colors": "^1.1.2",
-        "semver": "^5.3.0",
-        "underscore": "^1.8.3"
-    }
+  "name": "has-deps",
+  "version": "0.0.7",
+  "description": "A simple utility to check if your installed dependencies are up to date with what is listed in your package.json'",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "npm",
+    "dependencies",
+    "packages"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/91bananas/has-deps.git"
+  },
+  "bugs": "https://github.com/91bananas/has-deps/issues",
+  "homepage": "https://github.com/91bananas/has-deps",
+  "author": "David Cushman",
+  "license": "MIT",
+  "dependencies": {
+    "colors": "^1.1.2",
+    "semver": "^5.3.0",
+    "underscore": "^1.8.3"
+  }
 }
