@@ -5,21 +5,20 @@ var semver = require('semver'),
 module.exports = function (grunt) {
     return function () {
         var fs = require('fs'),
-            path = require('path');
-            console.log(path);
-
-            dependencies = _.extend({}, require('../package.json').dependencies, require('../package.json').devDependencies);
+            path = require('path'),
+            actualPath = path.resolve(),
+            dependencies = _.extend({}, require(actualPath + '/package.json').dependencies, require(actualPath + '/package.json').devDependencies);
         function getDirectories(srcpath) {
             return fs.readdirSync(srcpath).filter(function(file) {
                 return fs.statSync(path.join(srcpath, file)).isDirectory();
             });
         }
-        var names = getDirectories('./node_modules/'),
+        var names = getDirectories(actualPath + '/node_modules/'),
             directories = {};
 
         _.each(names, function (value, index) {
             if (value !== '.bin') {
-                directories[value] = require('../node_modules/' + value + '/package.json').version
+                directories[value] = require(actualPath + '/node_modules/' + value + '/package.json').version
             }
         });
 
