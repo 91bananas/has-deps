@@ -1,0 +1,16 @@
+{
+  "name": "has-deps",
+  "version": "0.0.1",
+  "description": "A simple utility to check if your installed dependencies are up to date with what is listed in your package.json'",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "npm",
+    "dependencies",
+    "packages"
+  ],
+  "author": "David Cushman",
+  "license": "MIT"
+}
