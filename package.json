@@ -1,6 +1,6 @@
 {
   "name": "has-deps",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "description": "A simple utility to check if your installed dependencies are up to date with what is listed in your package.json'",
   "main": "index.js",
   "scripts": {

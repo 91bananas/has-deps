@@ -7,7 +7,12 @@ module.exports = function (grunt) {
         var fs = require('fs'),
             path = require('path'),
             actualPath = path.resolve();
-        var pkg = require(actualPath + '/package.json');
+        var pkg;
+        if (fs.existsSync(actualPath + '/package.json')) {
+            pkg = require(actualPath + '/package.json');
+        } else {
+
+        }
         var dependencies;
 
         function getDirectories(srcpath) {
@@ -23,7 +28,13 @@ module.exports = function (grunt) {
 
             _.each(names, function (value, index) {
                 if (value !== '.bin') {
-                    directories[value] = require(actualPath + '/node_modules/' + value + '/package.json').version;
+                    try {
+                        directories[value] = require(actualPath + '/node_modules/' + value + '/package.json').version;
+                    } catch (e) {
+                        if (e.code === 'MODULE_NOT_FOUND') {
+                            grunt.log.writeln('\nDependency ' + actualPath + ' is weird...');
+                        }
+                    }
                 }
             });
 
