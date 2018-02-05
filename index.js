@@ -32,7 +32,7 @@ module.exports = function (grunt) {
                         directories[value] = require(actualPath + '/node_modules/' + value + '/package.json').version;
                     } catch (e) {
                         if (e.code === 'MODULE_NOT_FOUND') {
-                            grunt.log.writeln('\nDependency ' + actualPath + ' is weird...');
+                            grunt.log.writeln('\nDependency ' + actualPath + '/node_modules/' + value + '/' + ' is weird...');
                         }
                     }
                 }
