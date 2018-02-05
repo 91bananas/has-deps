@@ -65,9 +65,9 @@ module.exports = function (grunt) {
                 }
             });
             if (good) {
-                grunt.log.writeln('All dependencies met!'.dim.green);
+                grunt.log.writeln('All dependencies met! (' + actualPath + ')'.dim.green);
             } else {
-                grunt.fatal('Dependency not met');
+                grunt.fatal('Dependencies not met (' + actualPath + ')');
             }
         }
     };
